@@ -1,0 +1,24 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/malifpy/Alif/Git/tic-tac-toe-Recursive/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+Variasi 1	README.md	/^## Variasi 1$/;"	s	chapter:Variasi Permasalahan Koin Palsu
+Variasi 2	README.md	/^## Variasi 2$/;"	s	chapter:Variasi Permasalahan Koin Palsu
+Variasi 3	README.md	/^## Variasi 3$/;"	s	chapter:Variasi Permasalahan Koin Palsu
+Variasi Permasalahan Koin Palsu	README.md	/^# Variasi Permasalahan Koin Palsu$/;"	c
+printNode	var1.py	/^def printNode(depth, *args):$/;"	f
+printNode	var2.py	/^def printNode(depth, *args):$/;"	f
+printNode	var3.py	/^def printNode(depth, *args):$/;"	f
+var1	var1.py	/^def var1(l):$/;"	f
+var1rec	var1.py	/^def var1rec(depth, l):$/;"	f
+var2	var2.py	/^def var2(l):$/;"	f
+var2rec	var2.py	/^def var2rec(depth, l, real):$/;"	f
+var3	var3.py	/^def var3(l):$/;"	f
+var3rec	var3.py	/^def var3rec(depth, l, real, knowHere):$/;"	f
