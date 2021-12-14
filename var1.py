@@ -21,13 +21,15 @@ def var1rec(depth, l):
 
         # Berbagai macam kemungkinan
 
-        printNode(depth, l1, '>', l2)
+        printNode(depth, l1, ':', l2)
+
+        printNode(depth, "-->", l1, '>', l2)
         var1rec(depth + 1, l1)
 
-        printNode(depth, l1, '<', l2)
+        printNode(depth, "-->", l1, '<', l2)
         var1rec(depth + 1, l2)
 
-        printNode(depth, l1, '=', l2)
+        printNode(depth, "-->", l1, '=', l2)
         var1rec(depth + 1, l3)
     else:
         printNode(depth, l)
@@ -38,4 +40,4 @@ def var1(l):
     var1rec(1, l)
 
 if __name__ == "__main__":
-    var1(list("ABCD"))
+    var1(list("ABCDEFG"))

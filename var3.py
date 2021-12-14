@@ -23,10 +23,12 @@ def var3rec(depth, l, real, knowHere):
 
         # Berbagai macam kemungkinan
 
-        printNode(depth, l1, '!=', l2)
+        printNode(depth, l1, ':', l2)
+
+        printNode(depth, '-->', l1, '!=', l2)
         var3rec(depth + 1, l1 + l2, real + l3, True)
 
-        printNode(depth, l1, '==', l2)
+        printNode(depth, '-->', l1, '==', l2)
         var3rec(depth + 1, l3, real + l1 + l2, knowHere)
 
         # printNode(depth, l1, '=', l2)
@@ -36,20 +38,25 @@ def var3rec(depth, l, real, knowHere):
     elif not real or length == 0:
         printNode(depth, "TIDAK BISA DITENTUKAN")
     elif length == 1 and not knowHere:
-        printNode(depth, l, '!=', [real[0]])
+        l3 = [real[0]]
+        printNode(depth, l, ':', l3)
+
+        printNode(depth, '-->', l, '!=', l3)
         var3rec(depth + 1, l, real, not knowHere)
 
-        printNode(depth, l, '==', [real[0]])
+        printNode(depth, '-->', l, '==', l3)
         printNode(depth + 1, "TIDAK ADA")
     else: # length == 2 dan bisa dicompare dengan sesuatu
         l1 = [l[0]]
         l2 = [l[1]]
         l3 = [real[0]]
 
-        printNode(depth, l1, '!=', l3)
+        printNode(depth, l1, ':', l3)
+
+        printNode(depth, '-->', l1, '!=', l3)
         var3rec(depth + 1, l1, real + l1, True)
 
-        printNode(depth, l1, '==', l3)
+        printNode(depth, '-->', l1, '==', l3)
         var3rec(depth + 1, l2, real + l2, knowHere)
 
 def var3(l):

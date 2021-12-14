@@ -23,10 +23,12 @@ def var2rec(depth, l, real):
 
         # Berbagai macam kemungkinan
 
-        printNode(depth, l1, '!=', l2)
+        printNode(depth, l1, ':', l2)
+
+        printNode(depth, '-->', l1, '!=', l2)
         var2rec(depth + 1, l1 + l2, real + l3)
 
-        printNode(depth, l1, '==', l2)
+        printNode(depth, '-->', l1, '==', l2)
         var2rec(depth + 1, l3, real + l1 + l2)
 
         # printNode(depth, l1, '=', l2)
@@ -40,10 +42,12 @@ def var2rec(depth, l, real):
         l2 = [l[1]]
         l3 = [real[0]]
 
-        printNode(depth, l2, '==', l3)
+        printNode(depth, l1, ':', l3)
+
+        printNode(depth, '-->', l1, '!=', l3)
         var2rec(depth + 1, l1, real + l1)
 
-        printNode(depth, l1, '==', l3)
+        printNode(depth, '-->', l1, '==', l3)
         var2rec(depth + 1, l2, real + l2)
 
 def var2(l):
@@ -51,4 +55,4 @@ def var2(l):
     var2rec(1, l, [])
 
 if __name__ == "__main__":
-    var2(list("ABCD"))
+    var2(list("ABCDE"))
